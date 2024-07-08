@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0
+}
+
+:root{   
+/* Primary */
+--Orange: hsl(25, 97%, 53%);
+
+/* Neutral */
+--White: hsl(0, 0%, 100%);
+--LightGrey: hsl(217, 12%, 63%);
+--DarkBlue: hsl(213, 19%, 18%);
+--VeryDarkBlue: hsl(216, 12%, 8%);
+}
+
+body{
+    font-family: "Overpass", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    background-color: var(--VeryDarkBlue);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+main{
+    background-color: var(--DarkBlue);
+    width: 320px;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+main header{
+    margin-bottom: 20px;
+}
+
+main header div{
+    width: 40px;
+    height: 40px;
+    background-color: hsla(0, 0%, 100%, 0.041);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 100%;
+}
+
+main header div img{
+    width: 16px;
+    position: relative;
+    left: 1px;
+}
+
+main #ask{
+    margin-bottom: 20px;
+}
+
+main #ask h1{
+    color: var(--White);
+    font-weight: 700;
+}
+
+main #ask p{
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--LightGrey);
+    line-height: 23px;
+}
+
+main #selection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+main #selection button{
+    width: 40px;
+    height: 40px;
+    background-color: hsla(0, 0%, 100%, 0.041);
+    color: var(--LightGrey);
+    font-weight: 700;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    transition: .4s;
+}
+
+ main #selection button.clicked {
+    background-color: #fb7413;
+    color: hsl(216, 12%, 8%);
+}
+
+main #selection button:hover{
+    background-color: var(--White);
+    color: var(--VeryDarkBlue);
+}
+
+main footer button{
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    background-color: var(--Orange);
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: var(--VeryDarkBlue);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+main footer button:hover{
+    background-color: var(--White);
+}  
+
+#onSubmitMenu{
+    display: none;
+}
+
+#onSubmitMenu div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#onSubmitMenu div #outOfFive{
+    background-color: hsla(0, 0%, 100%, 0.068);
+    border-radius: 50px;
+    color: var(--Orange);
+    font-weight: 400;
+    padding: 8px 18px;
+    margin-bottom: 20px;
+}
+
+#onSubmitMenu div #tysm h1{
+    color: var(--White);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#onSubmitMenu div #tysm p{
+    color: var(--LightGrey);
+    font-size: 14px;
+    line-height: 23px;
+}
+
+@media only screen and (min-width: 768px){
+    main{
+        width: 425px;
+        padding: 25px;
+    }
+
+    main header{
+        margin-bottom: 25px;
+    }
+
+    main header div{
+        width: 50px;
+        height: 50px;
+    }
+    
+    main header div img{
+        width: 18px;
+    }
+
+    main #ask{
+        margin-bottom: 25px;
+    }
+
+    main #ask h1{
+        font-size: 26px;
+    }
+
+    main #ask p{
+        font-size: 16px;
+        line-height: 23px;
+        margin-top: 25px;
+    }
+
+    main #selection{
+        margin-bottom: 25px;
+    }
+
+    main #selection button{
+        width: 54px;
+        height: 54px;
+    }
+    
+    main footer button{
+        font-size: 14px;
+        padding: 18px 0;
+    }
+
+    #onSubmitMenu div #outOfFive{
+        padding: 10px 24px;
+        margin-bottom: 25px;
+        font-size: 15px;
+    }
+    
+    #onSubmitMenu div #tysm h1{
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+    
+    #onSubmitMenu div #tysm p{
+        color: var(--LightGrey);
+        font-size: 16.5px;
+    }
+}
